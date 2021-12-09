@@ -1,0 +1,10 @@
+.board{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.box{
+    border: 2px solid black;
+    height:100px;
+    width: 100px;
+}
