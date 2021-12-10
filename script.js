@@ -4,7 +4,7 @@ let player2Blocks = []
 
 const winningCombos =[
     ['1', '2', '3'],
-    ['1', '4', '7']
+    ['1', '4', '7'],
     ['1', '5', '9'],
     ['2', '5', '8'],
     ['3', '6', '9'],
@@ -13,7 +13,6 @@ const winningCombos =[
 ]
 
 function getId(id){
-
     if (playerTurn == 1){
         if(!player2Blocks.includes(id)){
             document.getElementById(id).style.backgroundColor = 'red';
@@ -31,17 +30,24 @@ function getId(id){
         }else{
             alert('choose a different box')
         }
-   
-
     }
+    for(let i = 0; i <= winningCombos.length -1; i++){
+        let newArr = []
+        newArr.push(winningCombos[i])
+        for(let k = 0; k <= winningCombos.length -1; k++){
 
-
-    for (let i = 0; i <= winningCombos.length; i++){
-        if (player1Blocks.includes(winningCombos[i])){
-            console.log('fdafdsa')
-        }     
-    }
+            let finalArr = []
+            finalArr.push(newArr[k])
+            }
+        }  
+} 
+    
+function reset(){
+        let boxes = document.querySelectorAll('td')
+        player1Blocks = []
+        player2Blocks = []
+        boxes.forEach((e) => {
+            e.style.backgroundColor = 'white'
+        })
 }
-
-
-
+    

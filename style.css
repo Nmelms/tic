@@ -8,3 +8,9 @@
     height:100px;
     width: 100px;
 }
+
+.myBtn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
